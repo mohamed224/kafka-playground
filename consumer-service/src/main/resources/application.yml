@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: consumer-service
+  kafka:
+    consumer:
+      group-id: partition-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+    bootstrap-servers: localhost:9092
+server:
+  port: 8082
